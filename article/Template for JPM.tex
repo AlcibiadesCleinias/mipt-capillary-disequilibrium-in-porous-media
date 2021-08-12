@@ -22,7 +22,7 @@
 \begin{document}
 
 \volume{Volume x, Issue x, \myyear\today}
-\title{The double porosity model of single-phase flow in a fractured porous medium taking into account scattered fracture of matrix blocks}
+\title{The double porosity model with fracture block matrices distribution of single-phase flow in a cracked porous medium}
 \titlehead{The double porosity model with scattered fracture}
 \authorhead{O. Izvekov, A. Konyukhov \& I. Cheprasov}
 %For at least  authors with different addresses, use instead the following commands
@@ -49,11 +49,12 @@
 %\dataF{}
 
 \abstract{
-The double porosity model of single-phase flow in a deformable medium with an elastic skeleton is generalized to the case of scattered matrix fracture.
-The medium consists of low-permeable (in the initial state) blocks and a connected system of mesoscale fractures, so that the poroelastic and flow characteristics are rapidly oscillating functions.
-The development of small-scale fracturing (scattered fracture) leads to an increase in the permeability of matrix blocks and the intensification of mass transfer between subsystems of double porosity media.
-By analyzing the inequality of dissipation, the thermodynamically consistent governing relations and the equation for evolution of the damage parameter in matrix are derived.
-The resulting system of differential equations includes, an equation expressing the condition of equilibrium of the medium, equations for pressures in the subsystems of double porosity, and an equation for the scalar damage parameter, consistent with the dissipation inequality. For the obtained system of equations, a initial-boundary-value problem is formulated and solved numerically that models a coupled processes of flow, fracture and changes in the stress-strain state in a loaded layer with double porosity, which was initially in equilibrium under high pore pressure.
+In the article, we generalize the double porosity model of single-phase flow in a deformable medium with an elastic skeleton to the case of fracture block matrices distribution.
+We consider the medium consists of low-permeable blocks (in the initial state) and a connected system of mesoscale fractures thereby the poroelastic and flow characteristics are rapidly oscillating functions.
+With our model, we discover that the growth of small-scale fractures (scattered fracture) leads to an in the permeability of the matrix and the mass transfer intensification between distributed subsystems of double porosity.
+By analyzing the inequality of dissipation, we derive the thermodynamically consistent governing relations and the equation for the evolution of the damage parameter in the matrix.
+The final system of differential equations includes an equation of a medium equilibrium state, equations of pressures in the subsystems of double porosity, an equation for the scalar damage parameter, and consistent equations of dissipation inequality.
+With the final system of the equations, we formulate an initial-boundary value problem that models a coupled flow processes, fracture processes, and changes in the stress-strain state of a double porosity layer (Initially the layer was in equilibrium and under high pore pressure).
 }
 
 \keywords{Porous medium, Double porosity, Scattered fracture, Abnormally high pore pressure}
@@ -66,11 +67,18 @@ The resulting system of differential equations includes, an equation expressing 
 
 \section{Introduction}
 \label{intro}
-The share of hydrocarbons extracted from unconventional deposits such as shale is increasing from year to year.
-The rocks of the fields under consideration are characterized by ultra-low permeability, oil source potential, abnormally high reservoir pressure (overpressure).
-The key to successful production of hydrocarbons from such rocks is the presence of a system of connected fractures in the vicinity of the production well, either technogenic or of natural origin.
-The most common development method, originally developed in shale fields in the United States, is horizontal drilling and a series of hydraulic fractures (the so-called multiple fracturing). The ultimate goal is to create a network of secondary fractures in the formation.
-The area covered by secondary fractures is called stimulated reservoir volume (SRV) \cite{Warpinski, Wu, Barati, Ma2015}.
+It is obvious, that interest in unconventional oil and gas development growths for the last time. Even more, and more petroleum companies and sometimes even governments face with the shale revolution [e.g. China https://energypolicy.columbia.edu/sites/default/files/China%20Shale%20Gas_WORKING%20DRAFT_Sept%2011_0.pdf].
+The interest may be associated with widespread and large shale oil reservoirs around the world [todo: links with info about Syberia in Russia; within the Green River Formation in Wyoming, Utah, and Colorado in the USA; provinces of Sichuan and Chongqing in China] and last success USA in shale oil production.
+Shale output of the USA growth rapidly and well from 2007  to below the January 2020 peak.
+To be more precise, now it is 9.18 million barrels per day, and it is 46\% of natural oil gas production in the USA.
+
+The rocks of the shale fields are characterized by ultra-low permeability, oil source potential, abnormally high reservoir pore pressure (as well knowing as overpressure).
+The conventional oil development methods have no success in these shale reservoirs.
+However, for the last decade, USA petroleum companies demonstrated success in shale oil production. The key to the successful production of hydrocarbons from shale reservoirs is the presence of a system of connected fractures in the vicinity of the production well, either technogenic or natural.
+The natural formation of secondary fractures is not studied well.
+In the USA a method of horizontal drilling and a method of series of hydraulic fractures (the so-called multi-well drilling pads, and multi-stage hydraulic fracturing) became the most common development method in shale oil production.
+While drilling the general goal is to create a network of secondary fractures in the formation, i.e. increase permeability in the tight rock formation.
+The area with the secondary fractures is called stimulated reservoir volume (SRV) \cite{Warpinski, Wu, Barati, Ma2015}.
 
 An abnormally high reservoir pressure is defined as exceeding the hydrostatic level.
 Overpressure is a fairly common phenomenon in formations composed of various rocks, and there are about twenty sources of its origin.
