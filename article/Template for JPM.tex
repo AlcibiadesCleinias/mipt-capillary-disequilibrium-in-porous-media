@@ -50,10 +50,10 @@
 
 \abstract{
 The double porosity model of single-phase flow in a deformable medium with an elastic skeleton is generalized to the case of scattered matrix fracture.
-The medium consists of low-permeable (in the initial state) blocks and a connected system of mesoscale fractures, so that the poroelastic and flow characteristics are rapidly oscillating functions.
+The medium consists of low-permeable (in the initial state) blocks and a connected system of mesoscale fractures so that the poroelastic and flow characteristics are rapidly oscillating functions.
 The development of small-scale fracturing (scattered fracture) leads to an increase in the permeability of matrix blocks and the intensification of mass transfer between subsystems of double porosity media.
-By analyzing the inequality of dissipation, the thermodynamically consistent governing relations and the equation for evolution of the damage parameter in matrix are derived.
-The resulting system of differential equations includes, an equation expressing the condition of equilibrium of the medium, equations for pressures in the subsystems of double porosity, and an equation for the scalar damage parameter, consistent with the dissipation inequality. For the obtained system of equations, a initial-boundary-value problem is formulated and solved numerically that models a coupled processes of flow, fracture and changes in the stress-strain state in a loaded layer with double porosity, which was initially in equilibrium under high pore pressure.
+By analyzing the inequality of dissipation, the thermodynamically consistent governing relations and the equation for the evolution of the damage parameter in the matrix are derived.
+The resulting system of differential equations includes an equation expressing the condition of equilibrium of the medium, equations for pressures in the subsystems of double porosity, and an equation for the scalar damage parameter, consistent with the dissipation inequality. For the obtained system of equations, an initial-boundary-value problem is formulated and solved numerically that models a coupled processes of flow, fracture, and changes in the stress-strain state in a loaded layer with double porosity, which was initially in equilibrium under high pore pressure.
 }
 
 \keywords{Porous medium, Double porosity, Scattered fracture, Abnormally high pore pressure}
@@ -68,49 +68,49 @@ The resulting system of differential equations includes, an equation expressing 
 \label{intro}
 The share of hydrocarbons extracted from unconventional deposits such as shale is increasing from year to year.
 The rocks of the fields under consideration are characterized by ultra-low permeability, oil source potential, abnormally high reservoir pressure (overpressure).
-The key to successful production of hydrocarbons from such rocks is the presence of a system of connected fractures in the vicinity of the production well, either technogenic or of natural origin.
+The key to the successful production of hydrocarbons from such rocks is the presence of a system of connected fractures in the vicinity of the production well, either technogenic or of natural origin.
 The most common development method, originally developed in shale fields in the United States, is horizontal drilling and a series of hydraulic fractures (the so-called multiple fracturing). The ultimate goal is to create a network of secondary fractures in the formation.
 The area covered by secondary fractures is called stimulated reservoir volume (SRV) \cite{Warpinski, Wu, Barati, Ma2015}.
 
-An abnormally high reservoir pressure is defined as exceeding the hydrostatic level.
+Abnormally high reservoir pressure is defined as exceeding the hydrostatic level.
 Overpressure is a fairly common phenomenon in formations composed of various rocks, and there are about twenty sources of its origin.
 In oil source shale rocks, overpressure is formed mainly due to the generation of fluids (processes of converting kerogen into liquid hydrocarbons).
-On the one hand, abnormally high formation pressure can cause catastrophic phenomena, such as collapse of the borehole walls when drilling with insufficiently dense drilling fluid \cite{Ma2015, Li}.
+On the one hand, abnormally high formation pressure can cause catastrophic phenomena, such as the collapse of the borehole walls when drilling with insufficiently dense drilling fluid \cite{Ma2015, Li}.
 On the other hand, AHPP can maintain fluid filtration in low permeability conditions when a simple drawdown is not enough for this.
 An unusual phenomenon is also associated with abnormal formation pressure.
 Wells drilled side by side under seemingly identical conditions can behave differently: one well gushes, showing high flow rates, while the other remains practically dry.
-At the same time, the following features are observed: high initial flow rates, sand and debris production, after the re-start of the well, the flow rates are not restored at the same level \cite{Alekseev}.
+At the same time, the following features are observed: high initial flow rates, sand, and debris production, after the re-start of the well, the flow rates are not restored at the same level \cite{Alekseev}.
 All this indicates that in the vicinity of the well there are irreversible destruction processes associated with the presence of abnormal pressure.
 Thus, abnormally high formation pressure can be considered as a potentially useful additional source of reservoir energy, the mastering of which is an urgent task.
 
-Continuum damage mechanics (CDM) is a natural approach to describing the nucleation, growth, and coalescence of microdefects, including cracks.
+Continuum damage mechanics (CDM) is a natural approach to describing the nucleation, growth, and coalescence of micro defects, including cracks.
 In this case, the number of defects in each elementary volume of the medium should be sufficiently large.
 The essence of the approach is the introduction of a scalar or tensor damage parameter into the number of thermodynamic parameters of the state of a continuous medium.
 The system of constitutive relations includes a special evolutionary equation for this parameter.
 The damage parameter is included in the constitutive relations and affects the behavior of the continuous medium.
 The physical interpretation of the damage parameter can be different and depends on specific conditions.
-At the macrolevel, the influence of damage leads to degradation of elastic moduli or the appearance of residual strain.
+At the macro level, the influence of damage leads to degradation of elastic moduli or the appearance of residual strain.
 In the pioneering works of L.M.
 Kachanov and Yu.N.
 Rabotnov the damage parameter was associated with an effective change in the cross-section of the rod when unloaded areas appeared in the vicinity of microcracks.
 Later, the theory of damage acquired a more abstract formulation, bringing it closer to the theory of viscoplasticity \cite{Lemaitre, Murakami}.
-In the works of Kondaurov, the role of energy balance in the evolution of microfracturing is emphasized, and the damage parameter is interpreted as a measure of the dissipation of continuous destruction \cite{Kondaurov2002}.
-Subsequently, these model of damage was generalized to the case of saturated porous media with a brittle skeleton \cite{Izvekov} and to the case of a medium with double porosity with a brittle matrix \cite{Izvekov2020}.
+In the works of Kondaurov, the role of energy balance in the evolution of micro fracturing is emphasized, and the damage parameter is interpreted as a measure of the dissipation of continuous destruction \cite{Kondaurov2002}.
+Subsequently, the model of damage was generalized to the case of saturated porous media with a brittle skeleton \cite{Izvekov} and to the case of a medium with double porosity with a brittle matrix \cite{Izvekov2020}.
+
 
 The influence of overpressure in a fractured-porous medium on the productivity of wells is usually limited to taking into account the dependence of the permeability of the fracture system on pressure \cite{Thompson}.
 CDM had not been applied to this problem until the publication of the paper \cite{Izvekov2020}, although the effect of matrix cracking under the action of overpressure has been known for a long time.
 For the first time, the phenomenon of natural hydraulic fracturing (NHF) under the action of overpressure in an impermeable medium was considered in \cite{Secor}.
 Later, a generalization was made to the case of a poroelastic medium \cite{Engelder, Luo}.
-It is believed that this phenomenon plays an important role in the processes of fluid migration, while referring to significant (geological) time scales.
+It is believed that this phenomenon plays an important role in the processes of fluid migration while referring to significant (geological) time scales.
 The cyclical nature of the process is noted.
-Obviously, a similar effect can be obtained during technogenic intervention in a reservoir with overpressure, when the initial stress-strain state of the reservoir is disturbed in some way.
+Obviously, a similar effect can be obtained during a technogenic intervention in a reservoir with overpressure, when the initial stress-strain state of the reservoir is disturbed in some way.
 In this paper, we consider the case when the overpressure has already formed, but the failure criterion for NHF has not yet been achieved.
 
-The main model for the continual description of fluid flow in a fractured-porous medium is the dual porosity model, first proposed in the works of Barenblatt, for example \cite{Barenblatt}.
+The main model for the continual description of fluid flow in a fractured-porous medium is the dual-porosity model, first proposed in the works of Barenblatt, for example, \cite{Barenblatt}.
 The family of continuous models of a medium with double porosity is based on the representation of the medium as a superposition of three continua - a solid skeleton and two fluids (fluid in fractures and fluid in matrix).
 Mass exchange is possible between fluids (matrix feeds fractures and vice versa).
 The skeleton can be poroelastic, poroplastic, or exhibit other rheological properties.
-
 In this work, a continual model of a dual porosity medium is developed.
 When the stress state changes under the action of overpressure, microcracks can appear in the matrix, which affects the intensity of mass transfer between the matrix and cracks.
 
@@ -128,19 +128,19 @@ In multicontinuous models, a special case of which is the double porosity model,
 \label{sec:2}
 Consider a saturated porous medium with an elastic brittle skeleton including a porous matrix and a system of main cracks.
 The matrix and fractures are saturated with the same low-compressible fluid.
-In the continuum approximation, a dual porosity medium is a superposition of two fluids and a skeleton.
+In the continuum approximation, a dual-porosity medium is a superposition of two fluids and a skeleton.
 Fluids correspond to liquids in the matrix and in fractures.
 In the present work, the isothermal approximation is used (this assumption is traditional in modeling non-thermal methods of oil production).
 All movements are assumed to be quasi-static, and skeletal deformations are small.
 
 Consider a saturated porous medium with an elastic brittle skeleton including a porous matrix and a system of main cracks.
-The matrix and fractures are satur ated with the same low-compressible fluid.
-In the continuum approximation, a dual porosity medium is a superposition of two fluids and a skeleton.
+The matrix and fractures are saturated with the same low-compressible fluid.
+In the continuum approximation, a dual-porosity medium is a superposition of two fluids and a skeleton.
 Fluids correspond to liquids in the matrix and in fractures.
 In the present work, the isothermal approximation is used (this assumption is traditional in modeling non-thermal methods of oil production).
-All movements are assumed to be quasi-static, and strain of the skeleton is small.
+All movements are assumed to be quasi-static, and the strain of the skeleton is small.
 
-Differential law of mass conservation in system under consideration is as follows
+Differential law of mass conservation in the system under consideration is as follows
 \begin{equation}
 \frac{\partial {{r}_{1}}}{\partial t}+\nabla \cdot \left( {{r}_{1}}{{\mathbf{v}}_{1}} \right)={{\dot{m}}_{12}},
 \end{equation}
@@ -150,7 +150,7 @@ Differential law of mass conservation in system under consideration is as follow
 \begin{equation}
 \frac{\partial {{r}_{S}}}{\partial t}+\nabla \cdot \left( {{r}_{S}}{{\mathbf{v}}_{S}} \right)=0,
 \end{equation}
-where subscript 1 denotes the fluid in matrix, subscript 2 denotes the fluid in fractures, subscript S denotes the skeleton, ${{\mathbf{v}}_{A}}$ is velocity of continua, ${{\dot{m}}_{12}}=-{{\dot{m}}_{21}}$ is the rate of mass exchange between matrix and fractures , ${{r}_{\alpha }}={{\phi }_{\alpha }}{{\rho }_{f}}$ and ${{r}_{S}}=(1-{{\phi }_{1}}-{{\phi }_{2}}){{\rho }_{S}}$, where ${{\rho }_{f}}$ is true density of liquid, ${{\rho }_{S}}$ is density of skeleton material, ${{\phi }_{\alpha }}={dV_{void}^{\alpha }}/{dV}\;$ is the volume fraction of fluids, $dV_{void}^{\alpha }$ is the volume of liquid in subsystem $\alpha=1,2$ and $dV$ is the elementary volume.
+where subscript 1 denotes the fluid in the matrix, subscript 2 denotes the fluid in fractures, subscript S denotes the skeleton, ${{\mathbf{v}}_{A}}$ is velocity of continua, ${{\dot{m}}_{12}}=-{{\dot{m}}_{21}}$ is the rate of mass exchange between the matrix and fractures , ${{r}_{\alpha }}={{\phi }_{\alpha }}{{\rho }_{f}}$ and ${{r}_{S}}=(1-{{\phi }_{1}}-{{\phi }_{2}}){{\rho }_{S}}$, where ${{\rho }_{f}}$ is true density of liquid, ${{\rho }_{S}}$ is density of skeleton material, ${{\phi }_{\alpha }}={dV_{void}^{\alpha }}/{dV}\;$ is the volume fraction of fluids, $dV_{void}^{\alpha }$ is the volume of liquid in subsystem $\alpha=1,2$ and $dV$ is the elementary volume.
 
 Let’s consider the equations of motion of fluids in the form of Darcy’s law.
 \begin{equation}
@@ -159,7 +159,7 @@ Let’s consider the equations of motion of fluids in the form of Darcy’s law.
 where ${{\mathbf{W}}_{\alpha }}={{\phi }_{\alpha }}{{\mathbf{w}}_{\alpha }}={{\phi }_{\alpha }}\left( {{\mathbf{v}}_{\alpha }}-{{\mathbf{v}}_{s}} \right)$, ${{p}_{\alpha }}$ is pore pressure, ${{k}_{\alpha }}$ is permeability, ${{\mu }_{f}}$ is viscosity, $\mathbf{g}$ is gravity acceleration. Let us consider for the simplicity that matrix permeability ${\alpha}=1)$ tends to zero and fracture permeability ${\alpha}=2)$ is constant and scalar.
 In general case permeability of fractures depends on stress state and has tensor character.
 
-Equation of equilibrium for skeleton and fluids as unified media is as follows
+The equation of equilibrium for the skeleton and the fluids as unified media is as follows
 \begin{equation}
 \nabla \cdot \mathbf{T}=-r\mathbf{g},
 \end{equation}
@@ -174,7 +174,7 @@ When deriving the inequality (6), the law of conservation of energy is taken int
 In the isothermal case, the energy equation is not used directly and is not presented here.
 
 To close the system of governing laws (1) - (5), we formulate a system of thermodynamically consistent constitutive relations \cite{Truesdell}.
-According to the theory developed by Coleman, Noll and Truesdell the constitutive relations must satisfy a number of statements including the principle of local action, the principle of invariance from the frame of reference, as well as the principle of thermodynamic consistency.
+According to the theory developed by Coleman, Noll, and Truesdell, the constitutive relations must satisfy a number of statements including the principle of local action, the principle of invariance from the frame of reference, as well as the principle of thermodynamic consistency.
 The latter principle states that the second law of thermodynamics in the form of the Clausius-Duhem inequality (6) imposes a restriction on the possible form of the constitutive relations in an arbitrary process.
 
 As the constitutive relations of a double poroelastic medium with a brittle skeleton, we take the set of the following functions
@@ -212,12 +212,12 @@ This assumption makes it possible to independently impose restrictions on the po
 \subsection{Linear approximation}
 Let’s consider the special initial state of the system
 $\left\{ 0,\,\rho _{\alpha }^{0},\,0,\,\omega \right\}$.
-In this state the skeleton has no strain and pore pressures are zero.
+In this state, the skeleton has no strain and pore pressures are zero.
 Let’s assume that the pressures in fluids and stress in the skeleton in arbitrary states are small in comparison with the characteristic elastic moduli of the skeleton
 ${{{p}_{\alpha }}}/{K}\;<<1$, ${\left\| {{\mathbf{T}}_{S}} \right\|}/{K}\;<<1$,
 where $K$ is the bulk module of the skeleton. We also consider a special case in which the initial total stresses in the state
 $\left\{ 0,\,\rho _{\alpha }^{0},\,0,\,0 \right\}$
-are zero. In the case of linear poroelasticity the assumptions made are correct.
+are zero. In the case of linear poroelasticity, the assumptions made are correct.
 
 Expansion of the free energy
 ${{\psi }_{\alpha }}\left( {{\rho }_{\alpha }} \right)$
@@ -236,7 +236,7 @@ where ${{K}_{f}}$ is the bulk module of the liquid. The expression (13) provides
 It is known that microcracks in shale samples formed during the extraction of hydrocarbons as a result of pyrolysis do not close.
 Hence, following \cite{Kondaurov2002, Izvekov, Izvekov2020}, we assume that the main macroscopic effect of damage is the residual strain of the skeleton.
 This assumption formally brings this version of the damage model closer to the theory of plasticity.
-Let us represent the expansion of the skeleton potential $\Psi $ to values of the second order of smallness, considering damage to be one of the small parameters, in the following form
+Let us represent the expansion of the skeleton potential $\Psi $ to values of the second order of smallness, considering the damage to be one of the small parameters, in the following form
 \begin{eqnarray}
 % \frac{\delta {{\rho }_{\alpha }}}{\rho _{\alpha }^{0}}=\frac{\delta {{p}_{\alpha }}}{{{K}_{f}}},
 r_{s}^{0} \Psi (\mathbf{e},{{p}_{\alpha }},\omega )=\frac{1}{2} \lambda I_{1}^{2}+\mu {{J}^{2}}+\sum\limits_{\alpha }{{{b}_{\alpha }}{{I}_{1}}{{p}_{\alpha}}} +\sum\limits_{\alpha }{\frac{1}{2{{N}_{\alpha }}}p_{\alpha }^{2}}+\frac{1}{{{N}_{12}}}{{p}_{1}}{{p}_{2}}+ \nonumber \\ +\sum \limits_{\alpha }{\phi _{\alpha }^{0}{{p}_{\alpha }}}+\gamma \omega +\beta {{{\omega }^{2}}}/{2}\;-\alpha {{I}_{1}}\omega -{{\alpha}_{J}}J \omega -{{\alpha }_{p1}}{{p}_{1}} \omega -{{\alpha }_{p2}}{{p}_{2}} \omega,
@@ -256,12 +256,12 @@ The expression (15) provides linear constitutive relations for the skeleton
 \end{equation}
 where $K=\lambda +\frac{2}{3}\mu$ is skeleton bulk modulus.
 
-Let us satisfy inequality (12) using a simple equation that defines the law of mass exchange between fluids
+Let us satisfy the inequality (12) using a simple equation that defines the law of mass exchange between fluids
 \begin{equation}
 \dot{m}=\frac{\rho _{{}}^{0}}{{{\mu }_{f}}}A\left( \omega \right)\left( {{p}_{1}}-{{p}_{2}} \right),
 \end{equation}
 where $A\left( \omega \right)\ge 0$ is coefficient that determines the intensity of mass transfer.
-As a result of cracking, the possibility of liquid transport inside the matrix improves and so mass transfer between fluids increases. In the case of an intact matrix (19) coincides with the classical expression \cite{Barenblatt}.
+As a result of cracking, the possibility of liquid transport inside the matrix improves and so mass transfer between fluids increases. The case of an intact matrix (19) coincides with the classical expression \cite{Barenblatt}.
 
 Similarly to \cite{Kondaurov2002, Izvekov, Izvekov2020}, we will accept the following law of damage evolution, which is sufficient to satisfy the dissipation inequality ${{\delta }_{\omega }}\ge 0$
 \begin{equation}
@@ -273,14 +273,14 @@ Similarly to \cite{Kondaurov2002, Izvekov, Izvekov2020}, we will accept the foll
 \end{equation}
 where $\left\langle f \right\rangle =0.5(f+|f|)$; $\tau$ is characteristic time.
 
-The physical meaning of expression (20) is that damage develops only when the elastic energy released when new surfaces appear exceeds the energy consumption for their appearance. The stronger this difference, the more intensively the damage develops. Equation (20) is somewhat analogous to the Griffiths theory for an isolated crack.
+The physical meaning of the expression (20) is that damage develops only when the elastic energy released when new surfaces appear exceeds the energy consumption for their appearance. The stronger this difference, the more intensively the damage develops. Equation (20) is somewhat analogous to the Griffiths theory for an isolated crack.
 
 Expressions (15) and (20) provide linear evolution law
 \begin{equation}
 \frac{\partial \omega }{\partial t}=\frac{1}{\tau \beta }\left\langle \alpha {{I}_{1}}+{{\alpha }_{J}}J+{{\alpha }_{p1}}{{p}_{1}}+{{\alpha }_{p2}}{{p}_{2}}-\beta \omega -\gamma \right\rangle.
 \end{equation}
 Rate of damage accumulation ${\partial \omega }/{\partial t}\;$ should be limited when $\tau \to 0$.
-It can be shown that in this case parameter $\omega$ becomes function of current state
+It can be shown that in this case parameter $\omega$ becomes a function of the current state
 \begin{equation}
 %\omega =\underset{\left[ 0,\,t \right]}
 \omega(x) ={\mathop{\max}}\,\left( \frac{1}{\beta }\left( \alpha {{I}_{1}}+{{\alpha }_{J}}J+{{\alpha}_{p1}}{{p}_{1}(x,\tau)}+{{\alpha}_{p2}}{{p}_{2}(x,\tau)}-\gamma  \right) \right),
@@ -314,7 +314,7 @@ Substitution (16) – (19) in (1), (2) and (5) gives
 where $M_{\alpha }^{-1}=N_{\alpha }^{-1}+\phi _{\alpha }^{{}}K_{f}^{-1}$.
 
 \section{Waves of depression and damage}
-The system (22), (26) - (28) describes the conjugate processes of fluid flow, deformation, and damage of double porosity saturated medium.
+The system (22), (26) - (28) describes the conjugate processes of fluid flow, deformation, and damage of double porosity saturated the medium.
 Of greatest interest are the processes of damage during the propagation of a depression wave from wells or a system of fractures artificially created by means of hydraulic fracturing.
 For simplicity, we will consider a one-dimensional process that develops with a decrease in pressure in an infinite plane crack in a porous medium with an initial pore pressure in each of the subsystems $p_0$ and the total stress tensor component in the direction of the normal to the crack $\sigma_0$.
 We will neglect the force of gravity.
@@ -354,11 +354,11 @@ where $\tau \in [0,t]$; $x$ is the coordinate normal to the crack. Following not
 
 According to (30) if mechanical properties of the medium are known, the damage depends only on the history of changes in pore pressures.
 We consider case ${{\chi}_{2}}< 0$ since only under this condition damage accumulation is possible.
-Neglecting the dependence of the capacitive properties on damage and cross terms in Eqs. (26), (27) in comparison with the diagonal terms, namely, setting
+Neglecting the dependence of the capacitive properties on damage and cross-terms in Eqs. (26), (27) in comparison with the diagonal terms, namely, setting
 \begin{equation}
 \frac{1}{{{N}_{12}}}+\frac{{{b}_{1}}{{b}_{2}}}{\Lambda}\ll \frac{1}{{{M}_{k}}}+\frac{b_{k}^{2}}{\Lambda},\quad k=1,2
 \end{equation}
-we arrive to the following system
+we arrive at the following system
 \begin{equation}
 \frac{\partial {{p}_{1}}}{\partial t}=A'(\omega )({{p}_{2}}-{{p}_{1}}),
 \end{equation}
@@ -374,7 +374,7 @@ A'(\omega )=\frac{A(\omega )}{\mu_f}/ \left( \frac{1}{{{M}_{1}}}+\frac{b_{1}^{2}
 \end{equation}
 Let ${{K}_{p}}=const, A'(\omega )={{A}_{\omega }}{{\omega }^{2}}$ for the sake of simplicity.
 For a given distance $x$ the two time scales may be defined: characteristic flow time ${{t}_{m}}={{X}^{2}}/{{K}_{p}}$ and time of mass exchange between the subsystems $1/({{A}_{\omega }}\chi_{2}^{2}p_{0}^{2})$.
-Equating these times we define the length scale ${{X}_{m}}={{K}_{p}}^{1/2}/({{A}_{\omega }}^{1/2}{|{\chi }_{2}|}{{p}_{0}})$. Using scales ${t}_{m}$,  ${X}_{m}$, $p_0$ for pressure and ${|\chi }_{2}|{{p}_{0}}$ for damage the equations can be written in the dimensionless form:
+Equating these times we define the length scale ${{X}_{m}}={{K}_{p}}^{1/2}/({{A}_{\omega }}^{1/2}{|{\chi }_{2}|}{{p}_{0}})$. Using scales ${t}_{m}$, ${X}_{m}$, $p_0$ for pressure and ${|\chi }_{2}|{{p}_{0}}$ for damage the equations can be written in the dimensionless form:
 \begin{equation}
 \frac{\partial {{p}_{1}}}{\partial t}={{\omega }^{2}}({{p}_{2}}-{{p}_{1}}),
 \end{equation}
@@ -389,20 +389,19 @@ Here, the dimensionless parameters $\chi ={{\chi }_{1}}/{|{\chi }_{2}|},\ {\Gamm
 
 Depending on the sign of $\chi$ two types of solutions are possible.
 Case $\chi<0$.
-Damage begins to accumulate as a result of a decrease in pressure in subsystem 2.
+The damage begins to accumulate as a result of a decrease in pressure in subsystem 2.
 A decrease in pressure in subsystem 1 accelerates the destruction process.
-Since at each point in space the pore pressure decreases, asymptotically approaching the pressure in the crack, the fracture process in this case is unlimited in time.
+Since at each point in space the pore pressure decreases, asymptotically approaching the pressure in the crack, the fracture process, in this case, is unlimited in time.
 The structure of the damage wave is shown in Fig. 1~a.
 Case $\chi>0$.
 As in the previous case, damage begins to accumulate as a result of depression in subsystem 2.
 A decrease in pressure in subsystem 1 slows down the destruction process. In the process of equalizing the pressures, the growth of damage stops.
 The maximum pressure difference in the subsystems and, accordingly, the accumulated damage decreases with the distance to the boundary.
 The evolution of damage is shown in Fig. 1~b.
-The effect of scattered fracture on the flow rate when producing from a formation with abnormally high pore pressure and low permeability is of great interest.
+The effect of a scattered fracture on the flow rate when producing from a formation with abnormally high pore pressure and low permeability is of great interest.
 Pore pressures $p_1$ and $p_2$ versus distance from the boundary at some point in time are shown in Fig. 2~a.
 The debit dependence on time in a wide range of parameter $r$ is shown in Fig. 2~b for $\chi=-10$ (solid line) and $\chi=1$ (dashed line).
 Linear dependence with slope $-1/2$ corresponds to solution without damage accumulation ($r=0$). It follows from the figure that all solutions have this asymptotic $q \propto 1/\sqrt{t}$. At the same time, the initial stage at $t < 1$ is characterized by nearly constant ($\chi=-1$) or even increasing in time ($\chi=-10$) flow rate, which depends on the value of $r$.
-
 \textit{Remark.} It is shown in \cite{Izvekov2020} that for shales following estimates hold. Value of ${{{\alpha }_{J}}}/{\alpha }\approx {3-7\nu +2{{\nu }^{2}}}/{\sqrt{6}{{\left( 1-\nu  \right)}^{2}}}$ belongs to the interval $1.07 -0.77$ at $\nu =0.2-0.35$, where $\nu$ is the Poisson coefficient of matrix. The following conditions hold ${{\alpha }_{p2}}\approx -{{\alpha }_{p1}}{{b}_{2}}\le 0$, ${{{b}_{1}}}/{{{b}_{2}}}\;\approx 10$, where ${{b}_{1}}\approx 1$ is close to the Biot coefficient of the matrix. In this case $\chi <0$ is of order $-10$.
 
 \section{Conclusions}
